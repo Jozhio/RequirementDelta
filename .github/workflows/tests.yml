@@ -1,0 +1,40 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows-tests:
+    name: Windows Python ${{ matrix.python-version }}
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.13"]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install package and tests
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[test]"
+      - name: Public regression tests
+        run: python -m pytest tests -q -rs
+      - name: Check console-script entry point
+        run: requirementdelta --version
+      - name: Build wheel
+        run: python -m pip wheel --no-deps . -w dist
+      - name: Validate wheel inventory
+        run: |
+          python -c "import pathlib,zipfile; p=list(pathlib.Path('dist').glob('requirementdelta-0.1.0-*.whl')); assert len(p)==1; z=zipfile.ZipFile(p[0]); assert z.testzip() is None; names=z.namelist(); assert any(n.endswith('/LICENSE') for n in names); assert all('official_p0_2' not in n and '/reports/' not in n for n in names)"

@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# Test and local outputs
+out/
+reports/
+.test-*/
+.pytest-tmp-*/
+.p02*/
+.p021*/
+.p03*/
+.test-codex*/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
