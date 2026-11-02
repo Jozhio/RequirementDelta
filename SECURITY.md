@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-Security fixes are currently considered for the latest public release candidate. This project is early-stage and does not yet promise a formal security response SLA.
+Security fixes are considered for the latest published version, beginning with v0.1.0. This project is early-stage and does not yet promise a formal security response SLA.
 
 ## Reporting a vulnerability
 

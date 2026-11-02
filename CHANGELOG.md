@@ -2,9 +2,9 @@
 
 All notable changes to RequirementDelta are documented here.
 
-## [0.1.0] - Unreleased
+## [0.1.0] - 2026-11-02
 
-First public-release candidate, prepared from the P0-4 prototype.
+Initial public release of RequirementDelta, based on the independently tested P0-4 prototype.
 
 ### Added
 - Local CLI for comparing two UTF-8 TXT/Markdown versions.

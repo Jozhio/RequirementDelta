@@ -18,7 +18,7 @@ RequirementDelta is an assistive review tool. It is not a legal, compliance, eli
 
 ## Status
 
-Version `0.1.0` is the first public-release candidate. It is an early-stage tool with a deliberately narrow scope. Automated tests and developer-run synthetic scenarios are not proof of real-world accuracy or independent user usability.
+Version `0.1.0` is the first public release. It is an early-stage tool with a deliberately narrow scope. Automated tests and developer-run synthetic scenarios are not proof of real-world accuracy or independent user usability.
 
 ## Requirements
 
@@ -157,7 +157,7 @@ python -m pip install -e ".[test]"
 python -m pytest tests -q -rs
 ```
 
-Only tests included in the clean public release candidate should be treated as public regression tests. Internal research reports and historical private fixtures are not part of this distribution.
+Only the tests included in this public repository are public regression tests. Internal research reports and historical private fixtures are not part of this distribution.
 
 ## Contributing and security
 
