@@ -20,7 +20,7 @@ First public-release candidate, prepared from the P0-4 prototype.
 ### Internal validation
 - On a Windows test workstation, both Codex and Claude Code (using a configured DeepSeek model) completed one real Skill-guided comparison of the same synthetic Markdown input; the generated CLI reports and evidence were independently checked.
 - Codex also completed one limited synthetic document-injection test without executing document-borne instructions. Claude Code completed an instruction-only refusal check with tools disabled; this does not validate unrestricted tool permissions.
-- The skills CLI discovered exactly one Skill and installed project-local copies for both Agent hosts from a local release-candidate checkout; installation from the public GitHub URL remains untested until publication.
+- Public GitHub URL installation was verified separately for the Python CLI and skills CLI in isolated Windows projects. The skills CLI installed matching project-local copies for Codex and Claude Code; a skills.sh catalog listing is not yet claimed.
 
 ### Limitations
 - No PDF/DOCX/OCR, web monitoring, or remote document retrieval.

@@ -8,7 +8,7 @@ Security fixes are currently considered for the latest public release candidate.
 
 Do not publish sensitive vulnerability details, private documents, credentials, or exploit material in a public issue.
 
-Before the first public release, the maintainer must make the repository public and enable GitHub Private Vulnerability Reporting in the repository security settings. After it is enabled, use the **Report a vulnerability** option from the [repository's Security Advisories page](https://github.com/Jozhio/RequirementDelta/security/advisories). This reporting route is **not active while the repository remains private in staging**. Until activation is verified, do not include confidential details in public issues or discussions; request a private reporting route from the maintainer without disclosing the vulnerability itself.
+GitHub Private Vulnerability Reporting is **enabled** for this public repository. To report a vulnerability privately, select **Report a vulnerability** on the [repository's Security Advisories page](https://github.com/Jozhio/RequirementDelta/security/advisories). Do not include confidential reports, exploit details, credentials, or private document content in public issues or discussions.
 
 ## Scope
 

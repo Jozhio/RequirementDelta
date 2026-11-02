@@ -135,7 +135,7 @@ This repository also includes an instruction-only Agent Skill:
 
 The Skill orchestrates the existing local CLI; it does not install the CLI or replace its deterministic rules. Install the Python package first, then use the project-level Skill in the corresponding agent. See [Agent Skill integration](docs/SKILL_INTEGRATION.md).
 
-Once this repository is publicly accessible, you can install both components into a different Windows project (requires Python 3.11+, Git, and Node.js 22.20+):
+To install both components from this public repository into a different Windows project (requires Python 3.11+, Git, and Node.js 22.20+):
 
 ```powershell
 py -3.11 -m venv .venv
@@ -144,7 +144,7 @@ py -3.11 -m venv .venv
 npx skills add Jozhio/RequirementDelta --skill requirementdelta -a codex -a claude-code --copy -y
 ```
 
-Run these commands from **your own target project**, not from the RequirementDelta source checkout. The Python CLI and Agent Skill are separate installations; `npx skills` does not install the CLI. The remote installation commands need network access; analysis with the installed CLI is local. The skills.sh installer has its own anonymous installation telemetry; set `DISABLE_TELEMETRY=1` if you want to opt out. The installer was tested against a local release-candidate directory; installation from the public GitHub URL can only be verified after publication.
+Run these commands from **your own target project**, not from the RequirementDelta source checkout. The Python CLI and Agent Skill are separate installations; `npx skills` does not install the CLI. The remote installation commands need network access; analysis with the installed CLI is local. The skills.sh installer has its own anonymous installation telemetry; set `DISABLE_TELEMETRY=1` if you want to opt out. Both public-GitHub URL installation of the Python CLI and public-source skills CLI installation have been tested in isolated Windows project directories. This is a developer-run smoke test, not independent user validation or confirmation of a skills.sh catalog listing.
 
 On one Windows workstation, Codex and Claude Code (configured with a DeepSeek model) have each completed a Skill-guided comparison of the same synthetic Markdown pair, with CLI output and evidence independently checked. Codex also passed one synthetic document-injection scenario; Claude passed an instruction-only refusal check with tools disabled. These are limited internal technical tests, not independent user testing or broad security validation. AionUi native Skill discovery and integration have not been tested.
 

@@ -44,7 +44,7 @@ If the agent's shell does not activate the virtual environment, use the explicit
 
 ## Install into a separate project with the skills CLI
 
-After this repository becomes public, the supported [skills.sh CLI](https://www.skills.sh/docs/cli) can discover and install its `requirementdelta` Skill. For a separate Windows project with Python 3.11+, Git, Node.js 22.20+ and a trusted network connection:
+From this public repository, the supported [skills.sh CLI](https://www.skills.sh/docs/cli) can discover and install its `requirementdelta` Skill. For a separate Windows project with Python 3.11+, Git, Node.js 22.20+ and a trusted network connection:
 
 ```powershell
 # Run in your own target project, not the RequirementDelta source directory
@@ -56,7 +56,7 @@ npx skills add Jozhio/RequirementDelta --skill requirementdelta -a codex -a clau
 
 The `--copy` option avoids project-level symlinks on Windows. The Skill installer does **not** install the RequirementDelta Python CLI; you must install and verify both separately. These setup commands use the network, while the CLI's runtime document analysis does not. The skills.sh installer can collect anonymous install telemetry; set `DISABLE_TELEMETRY=1` before running it if you wish to opt out.
 
-A real skills CLI `--list` and project-local `--copy` installation was verified against the **local candidate directory**: it found exactly one `requirementdelta` Skill and installed matching Skill instructions and references for Codex and Claude Code. **Remote installation via `Jozhio/RequirementDelta` has not been tested while the GitHub repository is private.** Do not describe this as a skills.sh catalog listing.
+The skills CLI was verified using both a **local candidate directory** and the **public GitHub repository URL**. It found exactly one `requirementdelta` Skill and successfully installed project-local copies with matching instructions and reference files for Codex and Claude Code. Separately, the Python CLI was installed from the public GitHub URL into a fresh virtual environment and passed a synthetic comparison. These smoke tests do **not** establish third-party user adoption or a skills.sh catalog listing.
 
 ## Use in Codex
 
