@@ -17,9 +17,11 @@ First public-release candidate, prepared from the P0-4 prototype.
 - Context-schema and report-interpretation references for the Skill.
 - Skill package regression tests for metadata, host-copy parity, references, and CLI smoke behavior.
 
+### Internal validation
+- On a Windows test workstation, both Codex and Claude Code (using a configured DeepSeek model) completed one real Skill-guided comparison of the same synthetic Markdown input; the generated CLI reports and evidence were independently checked.
+- Codex also completed one limited synthetic document-injection test without executing document-borne instructions. Claude Code completed an instruction-only refusal check with tools disabled; this does not validate unrestricted tool permissions.
+
 ### Limitations
 - No PDF/DOCX/OCR, web monitoring, or remote document retrieval.
 - No independent user study or real-world accuracy claim.
-- Codex project-level Skill metadata discovery was verified with Codex CLI 0.164.0; an actual Skill-triggered model session remains untested.
-- Claude Code project-level Skill files are included, but live `/skills` discovery and invocation remain untested.
-- AionUi native Skill discovery is not claimed or tested.
+- No AionUi native Skill discovery or broad adversarial security campaign has been completed.
