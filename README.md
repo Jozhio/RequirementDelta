@@ -1,6 +1,6 @@
 # RequirementDelta
 
-[简体中文](README.zh-CN.md) · [Release v0.1.0](https://github.com/Jozhio/RequirementDelta/releases/tag/v0.1.0) · [Usage](docs/USAGE.md) · [Agent Skill](docs/SKILL_INTEGRATION.md) · [Security](SECURITY.md)
+[简体中文](README.zh-CN.md) · [Release v0.1.0](https://github.com/Jozhio/RequirementDelta/releases/tag/v0.1.0) · [First run](docs/FIRST_RUN.md) · [Usage](docs/USAGE.md) · [Agent Skill](docs/SKILL_INTEGRATION.md) · [Security](SECURITY.md)
 
 [![Tests](https://github.com/Jozhio/RequirementDelta/actions/workflows/tests.yml/badge.svg)](https://github.com/Jozhio/RequirementDelta/actions/workflows/tests.yml)
 

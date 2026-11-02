@@ -2,7 +2,7 @@
 
 **本地、可追溯证据的需求文档变更审查工具：Python CLI + Agent Skill**
 
-[English](README.md) · [正式版本 v0.1.0](https://github.com/Jozhio/RequirementDelta/releases/tag/v0.1.0) · [使用文档](docs/USAGE.md) · [安全说明](SECURITY.md)
+[English](README.md) · [正式版本 v0.1.0](https://github.com/Jozhio/RequirementDelta/releases/tag/v0.1.0) · [首次运行演示](docs/FIRST_RUN.md) · [使用文档](docs/USAGE.md) · [安全说明](SECURITY.md)
 
 RequirementDelta 用于比较两份**用户明确选择的**旧版、新版需求或规则文档，找出当前规则支持识别的变化，并在报告中保留对应原文、位置及 SHA-256 校验信息。
 
