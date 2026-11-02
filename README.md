@@ -1,5 +1,9 @@
 # RequirementDelta
 
+[简体中文](README.zh-CN.md) · [Release v0.1.0](https://github.com/Jozhio/RequirementDelta/releases/tag/v0.1.0) · [Usage](docs/USAGE.md) · [Agent Skill](docs/SKILL_INTEGRATION.md) · [Security](SECURITY.md)
+
+[![Tests](https://github.com/Jozhio/RequirementDelta/actions/workflows/tests.yml/badge.svg)](https://github.com/Jozhio/RequirementDelta/actions/workflows/tests.yml)
+
 **Local, evidence-traceable review of changes between requirement documents.**
 
 RequirementDelta compares two local versions of a UTF-8 text or Markdown requirement document. It identifies changes within a bounded set of supported rules, preserves the original evidence, and can assess limited applicability when the user explicitly provides supported project or task context.
@@ -26,6 +30,24 @@ Version `0.1.0` is the first public release. It is an early-stage tool with a de
 - Python 3.11 or newer.
 - Runtime uses the Python standard library.
 - pytest is required only for development tests.
+
+## Quick installation (Windows, released v0.1.0)
+
+From **your own project directory**, with Python 3.11+ and Git installed:
+
+```powershell
+py -3.11 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install "git+https://github.com/Jozhio/RequirementDelta.git@v0.1.0"
+.\.venv\Scripts\requirementdelta.exe --version
+```
+
+For optional Codex and Claude Code Agent Skill integration, install Node.js 22.20+ and then run:
+
+```powershell
+npx skills add Jozhio/RequirementDelta --skill requirementdelta -a codex -a claude-code --copy -y
+```
+
+The Skill installer does **not** install the Python CLI; these are separate components. The released Python package is pinned to the v0.1.0 tag, while the Skill installer fetches the current repository source. See the [Chinese quick start](README.zh-CN.md) and the [Skill integration guide](docs/SKILL_INTEGRATION.md).
 
 ## Install from a local checkout
 
@@ -147,6 +169,10 @@ npx skills add Jozhio/RequirementDelta --skill requirementdelta -a codex -a clau
 Run these commands from **your own target project**, not from the RequirementDelta source checkout. The Python CLI and Agent Skill are separate installations; `npx skills` does not install the CLI. The remote installation commands need network access; analysis with the installed CLI is local. The skills.sh installer has its own anonymous installation telemetry; set `DISABLE_TELEMETRY=1` if you want to opt out. Both public-GitHub URL installation of the Python CLI and public-source skills CLI installation have been tested in isolated Windows project directories. This is a developer-run smoke test, not independent user validation or confirmation of a skills.sh catalog listing.
 
 On one Windows workstation, Codex and Claude Code (configured with a DeepSeek model) have each completed a Skill-guided comparison of the same synthetic Markdown pair, with CLI output and evidence independently checked. Codex also passed one synthetic document-injection scenario; Claude passed an instruction-only refusal check with tools disabled. These are limited internal technical tests, not independent user testing or broad security validation. AionUi native Skill discovery and integration have not been tested.
+
+## Verified technical checks
+
+The v0.1.0 release commit passed **258 tests on Windows Python 3.11** and **258 tests on Windows Python 3.13**, with zero failures or skips, in [GitHub Actions](https://github.com/Jozhio/RequirementDelta/actions/runs/41381291152). These are automated and developer-run synthetic tests, **not** proof of general real-world accuracy or independent user usability.
 
 ## Development tests
 
